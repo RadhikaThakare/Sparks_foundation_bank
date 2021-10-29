@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(5 0 0 / 73%);
+}
+.bank-container{
+    position: absolute;
+    width: 96%;
+    height: 94%;
+    box-shadow: 4px 4px 8px rgb(255, 254, 254);
+    box-shadow: -1px -1px 8px rgb(252, 250, 250);
+    border: 2px solid white;
+}
+.logo img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+.logo h3{
+    position: absolute;
+    top: 0.2rem;
+    left: 3rem;
+    font-size: 24px;
+    background-color: white;
+    padding: 0.4rem 1.5rem;
+    border-radius: 14px;
+    letter-spacing: 1px;
+    margin-left: 450px;
+    
+}
+.logo h3 span{
+    color: #1215f5;
+}
+.navbar{
+    position: absolute;
+    top: 1rem;
+    right: 9rem;
+    background-color: rgb(229, 226, 236);
+    width: 60px;
+    height: 310px;
+    line-height: 70px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.6);
+    /* display: flex;
+    flex-direction: row; */
+}
+
+/*position: relative; is positioned relative to its normal position*/
+.navbar ul{
+    position: relative;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+}
+.navbar ul li {
+    position: relative;
+    list-style: none; /*to make bullets disappear*/
+}
+.navbar ul li .icon{
+    position: relative;
+    font-size: 24px;
+    margin-left: -1.9rem;
+    width: 37px;
+    margin-top: 1rem;
+    padding: 7px 10px;
+}
+
+.active{
+    background-color: beige;
+    border-radius: 8px;
+}
+.navbar ul li .icon:hover{
+    background-color: rgb(245, 245, 236);
+    border-radius: 8px;
+    color: rgb(114, 197, 245);
+    font-weight: 900;
+}
+.navbar ul li .title{
+    cursor: pointer;
+    position: relative;
+    margin-left: 1rem;
+    font-size: 18px;
+    background-color: beige;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*for creation of Tooltip*/
+
+/*The ::before pseudo-element can be used to insert 
+some content before the content of an element.*/
+
+/*The ::after pseudo-element can be used to insert
+ some content after the content of an element.*/
+
+ /* IMPORTANT PROPERTY{ content:" "}*/
+.title::after{
+    position: absolute;
+    content: "";
+    background-color: beige;
+    width: 15px;
+    height: 15px;
+    margin-top: 2.5rem;
+    transform: rotateY(60deg);
+  transform-style: preserve-3d;
+}
+.navbar ul li:hover .title{
+    visibility: visible;
+    opacity: 1;
+    margin-right:11.5rem;
+    transition: all 1s ease;
+}
+.slogan{
+    position: absolute;
+    background-color: beige;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.slogan p{
+    color: black;
+    padding: 2px 1rem;
+    font-weight: 600;
+}
+.slogan p span{
+    color: black;
+}
+
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    /* margin-left: -110px; */
+    /* margin-left: -90px; */
+
+}
+.user{
+    cursor: pointer;
+}
+.user img{
+    width: 160px;
+    height: 130px;
+    border-radius: 18px;
+}
+.user p{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+.main a{
+    color: white;
+    text-decoration: none;
+    /* margin-left: -90px; */
+}
